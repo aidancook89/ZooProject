@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 public class Demo
 {
 
-   public static void main(String[] args)
+   public static void main(String[] args) throws InterruptedException
    {
       Animal a;
       String animalChoice = "";
@@ -40,10 +40,11 @@ public class Demo
       kb.nextLine();
 
       System.out.printf("Here, toss this to the %s.\n", animalChoice);
-      System.sleep(2);
+      Thread.sleep(2000);
       a.feed();
-      System.sleep(2);	
-      System.out.printf("Now we can see the %s relaxing after its meal\n", animalChoice);
+      Thread.sleep(2000);
+      System.out.printf("Now we can see the %s relaxing after its meal: \n", animalChoice);
+      Thread.sleep(2000);
       a.groom();
    }
 
